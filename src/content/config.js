@@ -7,7 +7,7 @@ const WorkCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     jobdescription: z.string(),
-    date: z.number().positive(),
+    date: z.number().positive() ,
     company: z.string(),
   }),
 });
