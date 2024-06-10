@@ -1,13 +1,30 @@
 import * as React from "react";
-import * as Fiber from "@react-three/fiber";
-import * as Drei from "@react-three/drei";
-import { useGLTF } from '@react-three/drei'
+
+import { Canvas } from '@react-three/fiber'
 
 
+
+
+const Test = () =>{
+        <div className="bg-red-300">
+<Canvas>
+<ambientLight intensity={0.5} />
+<directionalLight color="red" position={[0, 0, 5]} />    <mesh>
+      <sphereGeometry />
+      <meshStandardMaterial color="hotpink" />
+    </mesh>
+    </Canvas>            
+        </div>
+
+    
+}
+export default Test
+
+/*
 export default () => {
     const { scene } = Drei.useGLTF("/src/assets/Cube.glb");
     return (
-      <div className="h-screen h-100 z-0 bg-green-300">
+      <div className="h-screen h-100 z-0 ">
         <React.Suspense fallback={<p>...loading...</p>}>
           <Fiber.Canvas>
             <Drei.PerspectiveCamera makeDefault />
@@ -26,4 +43,4 @@ export default () => {
     );
   
   };
-  useGLTF.preload("/src/assets/Cube.glb")
+  useGLTF.preload("/src/assets/Cube.glb")*/
