@@ -1,4 +1,8 @@
 ---
+import { getCollection } from "astro:content";
+
+const allWork = await getCollection("Work");
+
 ---
 
 <html lang="en">
@@ -10,6 +14,19 @@
 		<title>Alexander Kazakov</title>
 	</head>
 	<body>
-        <p>work index</p>
+        <h1>Work</h1>
+        <ul class="animate flex flex-col gap-4">
+            {
+              allWork.map((work) => (
+                <li>
+                    <p>{work.data.title}</p>
+                    <p>{work.data.jobdescription}</p>
+                    <p>{work.data.date}</p>
+					<p>{work.data.company}</p>
+
+                </li>
+              ))
+            }
+          </ul>
     </body>
 </html>
