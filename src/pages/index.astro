@@ -1,7 +1,7 @@
 ---
 import type React from "react";
 import Menu from "../components/Menu.astro";
-import Test  from "../R3F/Test.jsx";
+import Scene from "../R3F/Scene.jsx";
 ---
 
 <html lang="en">
@@ -13,7 +13,11 @@ import Test  from "../R3F/Test.jsx";
 		<title>Alexander Kazakov</title>
 	</head>
 	<body>
-		<Menu/>
-		<Test client:only="react"/>
+		<div class="bg-red-300">
+			<Menu />
+		</div>
+		<div class="bg-yellow-500">
+			<Scene client:only="react" />
+		</div>
 	</body>
 </html>
