@@ -3,24 +3,22 @@ import * as React from "react";
 import { Canvas } from '@react-three/fiber'
 
 
-
+//- är vänster/ner flr x och y 
 
 const Scene = () => {
   return (
-    //ändras diven för att täcka hela
-    <div className="bg-yellow-300">
-      <Canvas>
-        <ambientLight intensity={0.1} />
-        <directionalLight color="hotpink" position={[0, 0, 5]} />
-        <mesh>
-          <boxGeometry />
-          <meshStandardMaterial />
-        </mesh>
-      </Canvas>
-    </div>
-  )
+    <Canvas>
+    <ambientLight intensity={0.1} />
+    <directionalLight color="red" position={[0, 0, 5]} />
+    <mesh position={[2, 0, 0]}>
+      <boxGeometry />
+      <meshStandardMaterial />
+    </mesh>
+  </Canvas>
+  );
 
 
 
-}
-export default Scene
+};
+
+export default Scene;

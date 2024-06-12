@@ -2,6 +2,9 @@
 import type React from "react";
 import Menu from "../components/Menu.astro";
 import Scene from "../R3F/Scene.jsx";
+import Name from "../components/Name.astro";
+//		<Menu />
+
 ---
 
 <html lang="en">
@@ -13,9 +16,9 @@ import Scene from "../R3F/Scene.jsx";
 		<title>Alexander Kazakov</title>
 	</head>
 	<body>
-		<div class="flex flex-1 bg-red-300">
-		<Menu />
-		<Scene client:only="react" />
+		<div class="h-screen w-screen">
+
+			<Scene client:only="react"></Scene>
 		</div>
 	</body>
 </html>
