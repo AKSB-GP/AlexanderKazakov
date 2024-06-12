@@ -1,8 +1,14 @@
 ---
-
+import { Image } from 'astro:assets';
+import GitLogo from "/src/assets/Images/github-mark-white.svg";
+const Time = new Date();
 //Add github/linkedin and date 
+
 ---
 
-<div>
-    <p>Alexander Kazakov</p>
+<div class="flex flex-nowrap justify-between  text-xl px-10">
+    <p>@{Time.getFullYear()} ALEXANDER KAZAKOV </p>
+    
+    <Image src={GitLogo} alt="Github link" width={30} height={30}><a href="https://github.com/AKSB-GP"></a>
+    <Image src={GitLogo} alt="Linkedin link" width={30} height={30}><a href="https://www.linkedin.com/in/alexander--kazakov/"></a>
 </div>

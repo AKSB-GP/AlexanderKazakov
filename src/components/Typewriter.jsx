@@ -6,13 +6,13 @@ const Typewriter = () => {
   return (
      //typed speed in miliseconds
     <>   
-    <div class ="flex flex-col inline items-center bg-blue-400">
+    <div class ="flex flex-col inline items-center">
     <div class=" text-7xl ">
-      <h1>Alexander Kazakov</h1>
+      <h1>ALEXANDER KAZAKOV</h1>
       </div >
       <div class=" text-5xl">
       <ReactTyped
-        strings={["Software Developer", "Technical Artist", "Student", "3D Artist"]}
+        strings={["SOFTWARE DEVELOPER", "TECHNICAL ARTIST", "STUDENT", "3D ARTIST"]}
       typeSpeed={50} backSpeed={30}
       loop showCursor>
     </ReactTyped>

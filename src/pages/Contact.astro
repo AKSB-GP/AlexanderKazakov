@@ -1,5 +1,6 @@
 ---
-import Menu from "../components/Menu.astro";
+import type React from "react";
+import Scene from "../R3F/Scene.jsx";
 ---
 
 <html lang="en">
@@ -11,6 +12,11 @@ import Menu from "../components/Menu.astro";
 		<title>Alexander Kazakov</title>
 	</head>
 	<body>
-<p>Contact page</p>
-    </body>
+		<div class="h-screen w-screen relative">
+			<Scene client:only="react" />
+			<div class="absolute top-[24rem] left-16">
+				<p>Contact page</p>
+			</div>
+		</div>
+	</body>
 </html>

@@ -3,25 +3,39 @@ import type React from "react";
 import Menu from "../components/Menu.astro";
 import Scene from "../R3F/Scene.jsx";
 import Typewriter from "../components/Typewriter.jsx";
-//							<Typewriter client:only />
-
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+		
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Alexander Kazakov</title>
 	</head>
-	<body>
+	<body class="font-montserrat-subrayada text-white">
 		<div class="h-screen w-screen relative">
 			<Scene client:only="react" />
-			<div class="absolute top-0 left-10">
-				<Typewriter client:only />
+			<div class="absolute top-[24rem] left-16">
+				<Typewriter client:only="react" />
+				<Menu />
+			</div>
+			<div class="absolute bottom-[4rem] w-screen h-2">
+				<Footer />
 			</div>
 		</div>
-		
 	</body>
 </html>

@@ -1,9 +1,41 @@
 ---
 import { getCollection } from "astro:content";
+import Scene from "../../R3F/Scene.jsx";
 
 const allWork = await getCollection("Work");
 
 ---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Alexander Kazakov</title>
+	</head>
+	<body>
+		<div class="h-screen w-screen relative">
+			<Scene client:only="react" />
+      <h1>Work</h1>
+      <ul class="animate flex flex-col gap-4">
+          {
+            allWork.map((work) => (
+              <li>
+                  <p>{work.data.title}</p>
+                  <p>{work.data.jobdescription}</p>
+                  <p>{work.data.date}</p>
+        <p>{work.data.company}</p>
+
+              </li>
+            ))
+          }
+        </ul></div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
 
 <html lang="en">
 	<head>
