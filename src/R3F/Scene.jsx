@@ -14,6 +14,7 @@ const Scene = () => {
       <boxGeometry />
       <meshStandardMaterial />
     </mesh>
+    
   </Canvas>
   );
 

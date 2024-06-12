@@ -2,7 +2,7 @@
 import type React from "react";
 import Menu from "../components/Menu.astro";
 import Scene from "../R3F/Scene.jsx";
-import Name from "../components/Name.astro";
+import Typewriter from "../components/Typewriter.jsx";
 //		<Menu />
 
 ---
@@ -16,9 +16,9 @@ import Name from "../components/Name.astro";
 		<title>Alexander Kazakov</title>
 	</head>
 	<body>
+		<Typewriter client:only></Typewriter>
 		<div class="h-screen w-screen">
-
-			<Scene client:only="react"></Scene>
+		<Scene client:only="react"></Scene>
 		</div>
 	</body>
 </html>
