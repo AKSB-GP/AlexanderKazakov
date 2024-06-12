@@ -3,7 +3,7 @@ import type React from "react";
 import Menu from "../components/Menu.astro";
 import Scene from "../R3F/Scene.jsx";
 import Typewriter from "../components/Typewriter.jsx";
-//		<Menu />
+//							<Typewriter client:only />
 
 ---
 
@@ -16,9 +16,12 @@ import Typewriter from "../components/Typewriter.jsx";
 		<title>Alexander Kazakov</title>
 	</head>
 	<body>
-		<Typewriter client:only></Typewriter>
-		<div class="h-screen w-screen">
-		<Scene client:only="react"></Scene>
+		<div class="h-screen w-screen relative">
+			<Scene client:only="react" />
+			<div class="absolute top-0 left-10">
+				<Typewriter client:only />
+			</div>
 		</div>
+		
 	</body>
 </html>

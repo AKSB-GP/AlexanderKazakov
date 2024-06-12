@@ -7,8 +7,7 @@ import { Canvas } from '@react-three/fiber'
 
 const Scene = () => {
   return (
-    <Canvas>
-    <ambientLight intensity={0.1} />
+    <Canvas style={{background:"#010857"}}>
     <directionalLight color="red" position={[0, 0, 5]} />
     <mesh position={[2, 0, 0]}>
       <boxGeometry />
