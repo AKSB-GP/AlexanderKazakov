@@ -14,7 +14,7 @@ const Typewriter = () => {
       <ReactTyped
         strings={["SOFTWARE DEVELOPER", "TECHNICAL ARTIST", "STUDENT", "3D ARTIST"]}
       typeSpeed={50} backSpeed={30}
-      loop showCursor>
+      loop showCursor cursorChar="_">
     </ReactTyped>
     </div>
     </div>
