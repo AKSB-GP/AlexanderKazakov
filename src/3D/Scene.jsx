@@ -1,6 +1,24 @@
 import * as React from "react";
+import { useMemo, useRef } from "react";
 
 import { Canvas } from '@react-three/fiber'
+
+const Particles = ()=>{
+
+  const points = useRef();
+
+  return (
+
+    <points>
+      <sphereGeometry position={[2, 0, 0]} scale={2}>
+      <pointsMaterial color="#5786F5" size={0.015} sizeAttenuation />
+
+      </sphereGeometry>
+    </points>
+
+
+  )
+}
 
 
 
@@ -11,7 +29,7 @@ const Scene = () => {
     <directionalLight color="red" position={[0, 0, 5]} />
     <mesh position={[2, 0, 0]} scale={2}>
       <sphereGeometry />
-      <meshStandardMaterial wireframe/>
+      <pointsMaterial wireframe/>
     </mesh>
   </Canvas>
   );
