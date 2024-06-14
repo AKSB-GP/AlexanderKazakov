@@ -1,7 +1,7 @@
 
 import { ReactTyped } from "react-typed";
 
-
+//Look into framer-motion implementation later,compare performance/versatility
 const Typewriter = () => {
   return (
      //typed speed in miliseconds

@@ -1,7 +1,7 @@
 ---
 import type React from "react";
 import Menu from "../components/Menu.astro";
-import Scene from "../R3F/Scene.jsx";
+import Scene from "../3D/Scene.jsx";
 import Typewriter from "../components/Typewriter.jsx";
 import Footer from "../components/Footer.astro";
 ---
@@ -26,7 +26,7 @@ import Footer from "../components/Footer.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Alexander Kazakov</title>
 	</head>
-	<body class="font-montserrat-subrayada text-white">
+	<body class="font-oswald text-white">
 		<div class="h-screen w-screen relative">
 			<Scene client:only="react" />
 			<div class="absolute top-[24rem] left-16">
