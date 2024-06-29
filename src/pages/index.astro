@@ -1,5 +1,4 @@
 ---
-import type React from "react";
 import Menu from "../components/Menu.astro";
 import Scene from "../3D/Scene.jsx";
 import Typewriter from "../components/Typewriter.jsx";
@@ -23,7 +22,6 @@ import Radialmenu from "../components/Radialmenu.astro";
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
 		
-		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Alexander Kazakov</title>
 	</head>
@@ -32,16 +30,12 @@ import Radialmenu from "../components/Radialmenu.astro";
 			<Scene client:only="react" />
 
 
-			<div class="absolute top-[24rem] left-16">
+			<div class="absolute top-[26rem] left-16">
 				<Typewriter client:only="react" />
 				
-
 			</div>
-			
 			<div class="absolute top-[10rem] right-[20rem]">
-				
 				<Radialmenu/>
-
 			</div>
 			<div class="absolute bottom-[4rem] w-screen h-2">
 				<Footer />
